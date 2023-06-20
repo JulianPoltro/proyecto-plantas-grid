@@ -8,20 +8,28 @@
   width: 100vw;
   height: 30vh;
   background-color: whitesmoke;
-  display: flex;
-  justify-content: center;
-  position: relative;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  overflow: hidden;
 }
 .header .barra-superior {
-  width: 100%;
+  font-size: 22px;
+  top: 0;
   background-color: rgb(200, 200, 200);
-  height: 22px;
+}
+.header .logo {
+  height: 20vh;
+  background-color: blue;
+  display: flex;
+}
+.header .logo a {
+  align-items: center;
+}
+.header .logo a img {
+  height: 100%;
 }
 .header .navegacion {
-  width: 50%;
-  position: absolute;
   bottom: 0;
-  margin: 1rem;
 }
 .header .navegacion .lista-nav {
   display: flex;
@@ -37,7 +45,7 @@
   color: black;
 }
 
-.banner {
+.main .banner {
   width: 100vw;
   height: 70vh;
   background-image: url(../assets/img/banner-actividad.jpg);

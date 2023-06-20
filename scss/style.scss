@@ -5,27 +5,35 @@
 }
 
 .header {
-    .barra-superior {
-        width: 100%;
-        background-color: rgb(200, 200, 200);
-        height: 22px;
-    }
-
     width: 100vw;
     height: 30vh;
     background-color: whitesmoke;
-    display: flex;
-    justify-content:center;
-    position: relative;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    overflow: hidden;
+
+    .barra-superior {
+        font-size: 22px;
+        top: 0;
+        background-color: rgb(200, 200, 200);
+    }
+
+    .logo {
+        height:20vh;
+        background-color: blue;
+        display: flex;
+        a {
+            align-items: center;
+            img {
+
+                height: 100%;
+            }
+        }
+    }
 
     .navegacion {
-        width: 50%;
-        position: absolute;
         bottom: 0;
-        margin: 1rem;
-
         .lista-nav {
-
             display: flex;
             list-style: none;
             justify-content: space-around;
@@ -44,11 +52,14 @@
     }
 }
 
-.banner {
-    width: 100vw;
-    height: 70vh;
-    background-image: url(../assets/img/banner-actividad.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+.main  {
+
+    .banner {
+        width: 100vw;
+        height: 70vh;
+        background-image: url(../assets/img/banner-actividad.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
 }

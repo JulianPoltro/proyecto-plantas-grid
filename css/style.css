@@ -61,6 +61,7 @@
 .main {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
+  gap: 2rem;
 }
 .main .banner {
   grid-column: 1/-1;
@@ -68,16 +69,117 @@
   background-image: url(../assets/img/banner-actividad.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main .banner h2 {
+  font-size: 3rem;
+}
+.main .banner p {
+  font-size: 1.5rem;
+}
+.main .banner button {
+  background-color: goldenrod;
+  border-radius: 2.5rem;
+  height: 2.5rem;
+  width: 7rem;
+  border: none;
+  margin-top: 5rem;
+}
+.main .banner button:hover {
+  background-color: rgb(204, 156, 35);
 }
 .main .actualProduct {
   grid-column: 2/7;
-  height: 200px;
-  background-color: red;
+  height: 60vh;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1rem;
+}
+.main .actualProduct .productIz {
+  background-image: url(../assets/img/card1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  grid-column: 1/3;
+  grid-row: 1/-1;
+  padding: 0.5rem;
+}
+.main .actualProduct .productIz button {
+  background-color: goldenrod;
+  border-radius: 2rem;
+  height: 2rem;
+  width: 7rem;
+  border: none;
+  margin-top: 2rem;
+}
+.main .actualProduct .productIz button:hover {
+  background-color: rgb(204, 156, 35);
+}
+.main .actualProduct .producAI {
+  background-image: url(../assets/img/card2.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  grid-column: 3/4;
+  grid-row: 1/2;
+}
+.main .actualProduct .producAD {
+  background-image: url(../assets/img/card3.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  grid-column: 4/5;
+  grid-row: 1/2;
+}
+.main .actualProduct .productDr {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  color: black;
+  font-weight: bold;
+  background-image: url(../assets/img/card4.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  grid-column: 3/5;
+  grid-row: 2/3;
 }
 .main .newProduct {
+  grid-column: 1/-1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 40vh;
+  background-color: rgb(220, 220, 220);
+}
+.main .newProduct .contenedorCard {
   grid-column: 2/7;
-  height: 200px;
-  background-color: rgb(51, 255, 0);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  height: 80%;
+  gap: 2rem;
+}
+.main .newProduct .contenedorCard .productCard {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  height: 32vh;
+  background-color: silver;
+  padding: 0.5rem;
+  border: 1px solid black;
+  border-radius: 2rem;
+  overflow: hidden;
+}
+.main .newProduct .contenedorCard .productCard img {
+  width: auto;
+  height: 80%;
+  object-fit: cover;
 }
 .main .aboutUs {
   grid-column: 2/7;
